@@ -1,5 +1,6 @@
 # Table of Contents
 1. [About Project](#about-project)
+    - [Running demo of Project](#running-demo-of-project)
 2. [Systems architecture (High Level)](#systems-architecture)
 3. [Running Project](#running-project)
 4. [Kafka](#kafka)
