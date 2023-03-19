@@ -20,8 +20,12 @@ It is real-time dashboard. It uses kafka to produce dummy temperature, humiditiy
 ## **Running demo of project**
 
 <video width="320" height="240" controls>
-    <source src="https://github.com/virengajera/realtime-dashboard/blob/main/assets/recording%20of%20realtime%20dashboard.mp4" type="video/mp4">
+    <source src="./assets/recording-of-realtime-dashboard.mp4" type="video/mp4">
 </video>
+
+| ![Dashboard Snapshot](./assets/dashboard.png) | 
+|:--:| 
+| *Dashboard Snapshot* |
 
 
 # **Systems architecture**
