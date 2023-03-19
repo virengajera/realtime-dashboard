@@ -1,0 +1,39 @@
+version: '3'
+ 
+services:
+  zookeeper:
+    image: confluentinc/cp-zookeeper
+    hostname: zookeeper
+    container_name: zookeeper
+    ports:
+      - "2181:2181"
+    environment:
+      ZOOKEEPER_CLIENT_PORT: 2181
+      ZOOKEEPER_TICK_TIME: 2000
+
+  questdb:
+    image: questdb/questdb
+    hostname: questdb
+    container_name: questdb
+    ports:
+      - "8812:8812"
+      - "9000:9000"
+      - "9009:9009"
+ 
+  broker:
+    image: confluentinc/cp-kafka
+    hostname: kafka
+    container_name: kafka
+    depends_on:
+      - zookeeper
+      - questdb
+    ports:
+      - "9092:9092"
+    environment:
+      KAFKA_BROKER_ID: 1
+      KAFKA_ZOOKEEPER_CONNECT: 'zookeeper:2181'
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT,PLAINTEXT_HOST:PLAINTEXT
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://localhost:9092
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+      KAFKA_GROUP_INITIAL_REBALANCE_DELAY_MS: 0
+      KAFKA_TOOLS_LOG4J_LOGLEVEL: ERROR

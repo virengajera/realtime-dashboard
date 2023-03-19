@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
+
+        
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.2.1/dist/chart.umd.min.js"></script>
+    
+    <script
+        src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns@3.0.0/dist/chartjs-adapter-date-fns.bundle.min.js"></script>
+
+        <!-- <script src="https://cdn.jsdelivr.net/npm/luxon@1.27.0"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-luxon@1.0.0"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-streaming@2.0.0/dist/chartjs-plugin-streaming.min.js"></script> -->
+
+    <link rel="stylesheet" href="/css/index.css">
+    <title>Dashboard</title>
+</head>
+
+<body>
+
+    <div class="app">
+        <div class="grid-container">
+            <div class="grid-item" id="temperature-room1">
+                <canvas id="temperature-room1-chart"></canvas>
+            </div>
+            <div class="grid-item" id="temperature-room2">
+                <canvas id="temperature-room2-chart"></canvas>
+
+            </div>
+            <div class="grid-item" id="temperature-systemusage">
+                <canvas id="temperature-systemusage-chart"></canvas>
+            </div>
+
+            <div class="grid-item" id="humidity-room1">
+                <canvas id="humidity-room1-chart"></canvas>
+            </div>
+            <div class="grid-item" id="humidity-room2">
+                <canvas id="humidity-room2-chart"></canvas>
+
+            </div>
+            <div class="grid-item" id="humidity-systemusage">
+                <canvas id="humidity-systemusage-chart"></canvas>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/js/line-chart.js"></script>
+    <script src="/js/render-line-chart.js"></script>
+    <script src="/js/bar-chart.js"></script>
+    <script src="/js/render-bar-chart.js"></script>
+    <script src="/js/realtime-chart-update.js"></script>
+
+</body>
+
+</html>
