@@ -18,7 +18,7 @@ It is real-time dashboard. It uses kafka to produce dummy temperature, humiditiy
 
 ## **Running demo of project**
 
-![Project Video](./assets/recording%20of%20realtime%20dashborad.mkv)
+![Project Video](https://github.com/virengajera/realtime-dashboard/blob/main/assets/recording%20of%20realtime%20dashborad.mkv)
 
 # **Systems architecture**
 
