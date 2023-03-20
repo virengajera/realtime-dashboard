@@ -54,7 +54,7 @@ async function produce(config) {
                 messages: message
             })
 
-            console.log(`Message sent ==> Topic : ${config.topic} ==> Response ${response}`)
+            console.log(`Message sent ==> Topic : ${config.topic} ==> Response :`,response)
 
         }, 10000)
 

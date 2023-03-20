@@ -65,14 +65,15 @@ async function consume(config) {
                     await insertInDB(client, config.consumer, data)
                     data[0]['ts'] = data[1]['ts'] = Date.now()
                     socket.emit(config.emit_event_name, data)
+                    //await client.release()
 
                 } catch (error) {
-                    if (error) {
+                        await client.release()
                         console.error("Error ==>", error.message)
                         consumer.pause([{ topic }])
                         let retryAfter = (error && error.retryAfter) ? 5000 : error.retryAfter * 1000
                         setTimeout(() => consumer.resume([{ topic }]), retryAfter)
-                    }
+
                 }
 
             },
@@ -111,5 +112,6 @@ async function insertInDB(client, consumer, data) {
         await client.query(sqlInsert, values)
 
         console.log("Data Inserted in DB")
+
 
 }
