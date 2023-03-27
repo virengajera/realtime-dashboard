@@ -42,13 +42,14 @@ Browser : It gets real-time data from node.js server through web-sockets. For in
 2. To Run Producers : Navigate to folder `cd kafka-producer-consumer`
 3. Install dependencies: `npm install`
 4. Run Admin file in order to create topics `node admin.js`
-5. Run the producers. **Note:** We have start all the producer as seperate process and it should be running in the background.
+5. Run the producers. 
+**Note:** All the producer must be running as seperate process and in the background.
 ```
 node producer.js temperature
 node producer.js humidity
 node producer.js systemusage
 ```
-6. To run Consumers like produce we will start 3 different node process.
+6. Run all the Consumers likewise Producer as 3 different node process.
 ```
 node consumer.js temperature
 node consumer.js humidity
