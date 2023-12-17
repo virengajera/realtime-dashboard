@@ -31,7 +31,7 @@ Kafka consumer : consumes those message by subscribing those topics and perform 
 
 Browser : Data are fetched throug API for intial rendering and For real-time it uses web-sockets and updates charts in real-time.
 
-| ![System architecture](./assets/system-architecture.png) | 
+| ![System architecture](./assets/system-architecture2.png) | 
 |:--:| 
 | *System architecture* |
 
